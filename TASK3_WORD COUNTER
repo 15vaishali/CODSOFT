@@ -5,13 +5,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class wordcounterr {
+public class WordCounterr {
     private static final String STOP_WORDS = "a an the and or but in on at to from";
 
     public static void main(String[] args) {
         String text = getTextFromUser();
         if (text == null) {
-            System.out.println("Invalid input. Exiting...");
+            System.out.println("Invalid input.");
             return;
         }
 
@@ -23,7 +23,7 @@ public class wordcounterr {
         System.out.println("Unique words: " + uniqueWords);
 
         Map<String, Integer> wordFrequencies = getWordFrequencies(words);
-        System.out.println("Word frequencies:");
+        System.out.println("Word frequencies");
         for (Map.Entry<String, Integer> entry : wordFrequencies.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
